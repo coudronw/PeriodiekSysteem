@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="nl">
+
+<head>
+    <script src="periodiekSysteem.js" defer></script>
+    <title>periodiekSysteem</title>
+    <link rel="stylesheet" href="periodiekSysteem.css">
+    <link rel="icon" type="image/x-icon" href="Img/bob.PNG">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <h1>Periodic Table Of The Elements</h1>
+
+    <div id="suspicionBar" hidden>
+        <label for="suspicion">Suspicion on Bob:</label>
+        <progress id="suspicion" value="0" max="4"></progress>
+    </div>
+    <p hidden id="ranaway">Bob ran away</p>
+
+    <table id="periodicTable">
+    </table>
+    
+    <div id="overlay">
+        <button onclick=off()>X</button>
+        <div id="elementInfo">       
+            <ul id="left">
+                <li id="elementName" class="overlayText"></li>
+                <li id="atomicNumber" class="overlayText"></li>
+                <li id="atomicMass" class="overlayText"></li>
+                <li id="appearance" class="overlayText"></li>
+                <li id="boilingPoint" class="overlayText"></li>
+                <li id="meltingPoint" class="overlayText"></li>
+            </ul>       
+            <model-viewer id="element3DModel" alt="elementModel" src="" camera-controls touch-action="pan-y"></model-viewer> 
+        </div>
+    </div>
+</body>
+
+</html>

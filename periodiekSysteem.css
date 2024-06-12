@@ -1,0 +1,173 @@
+@charset "utf-8";
+/*general*/
+body {
+    background: black;
+    font-family: sans-serif;
+}
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+
+/*periodic table*/
+#periodicTable {
+    width: 80%;
+    border-spacing: 0px;
+    margin: auto;
+}
+#periodicTable tr {
+    line-height: 5em;
+}
+.filledCell {
+    background-color: rgb(172, 172, 172);
+    border-radius: 20px;
+    border: 1px solid;
+    border-collapse: separate;
+    font-size: 3em;
+    text-align: center;
+    cursor: pointer;
+}
+/*overlay styling*/
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.85);
+    z-index: 2;
+}
+button {
+    cursor: pointer;
+    float: right;
+    border-radius: 50%;
+    font-size: 3em;
+    width: 3em;
+    height: 3em;
+    background-color: transparent; 
+    border: none;
+    color: white;
+}
+#elementInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+#element3DModel {
+    width: 100%;
+    height: 100%;
+    margin-right: 20%;
+}
+#left {
+    margin-left: 15%;
+}
+li {
+    list-style-type: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.overlayText {
+    font-size: 2em;
+    color: white;
+}
+#elementName {
+    font-size: 5em;
+}
+
+/*suspicion*/
+#suspicionBar {
+    text-align: center;
+}
+label {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+#suspicion {
+    height: 50px;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+/*Bob behaviour*/
+.nervous1 {
+    background-image: url("Img/droplet.png");
+    background-position: 90% 10%;
+    background-repeat: no-repeat;
+    background-size: 20%;
+}
+.nervous2 {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+.runaway {
+    animation: run 0.9s forwards;
+}
+@keyframes run {
+    0% { transform: translate(0px,0px); }
+    100% { transform: translate(-1000%,0px); }
+}
+.textBalloon {
+    border: 2px solid white;
+    border-radius: 20px 20px 20px 0px;
+    width: 100px;
+    line-height: 1em;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    margin: auto;
+}
+#ranaway {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+}
+
+/*colors of element classes*/
+.actinide {
+    background-color: orange;
+}
+.alkalineearthmetal {
+    background-color: rgb(254, 198, 95); 
+}
+.alkalimetal {
+    background-color: rgb(255, 80, 80); 
+}
+.metalloid {
+    background-color: rgb(84, 84, 253); 
+}
+.polyatomicnonmetal {
+    background-color: lightblue; 
+}
+.diatomicnonmetal {
+    background-color: lightblue; 
+}
+.noblegas {
+    background-color: rgb(128, 67, 128); 
+}
+.transitionmetal {
+    background-color: rgb(255, 255, 133); 
+}
+.post-transitionmetal {
+    background-color: rgb(74, 130, 74); 
+}
+.lanthanide {
+    background-color: pink; 
+}
